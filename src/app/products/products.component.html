@@ -1,11 +1,13 @@
 
 <div>
-  <h2>Products  <span class="badge badge-light">{{len}}</span></h2>
+  <h2>Products  <span class="badge badge-light"></span></h2>
   <table class="table">
     <tr>
+        <td>Images</td>
         <td>Name</td>
         <td>Price</td>
         <td>Quantity</td>
+        <td>Description</td>
         <td colspan="2">Options</td>
     </tr>
     <tr  *ngFor="let prod of products; let i= index;">
@@ -15,12 +17,12 @@
       </td>
       <td>{{prod.name}}</td>
       <td>{{prod.price}}</td>
+      <td>{{prod.qty}}</td>
+      <td>{{prod.desc}}</td>
       <td>
-        <a routerLink="/form/{{i}}"><i class="fas fa-edit"></i></a>
+        <a routerLink="/form/{{i}}"><i class="fas fa-edit">edit</i></a>
       </td>
-      <td (click)="deleteProd(prod)"><i class="fas fa-trash-alt"></i></td>
+      <td (click)="deleteProd(prod)"><i class="fas fa-trash-alt">delete</i></td>
     </tr>
     </table>
-
-
   </div>

@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'one';
-  len = JSON.parse(localStorage.getItem('products')).length;
 }

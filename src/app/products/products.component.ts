@@ -11,16 +11,11 @@ export class ProductsComponent implements OnInit {
  
   constructor() { }
 
-  products: Product[] =  JSON.parse(localStorage.getItem("products"));;
-
-      prod : Product = {
-        name : "a",
-        price : 0,
-        img : null
-      };
+  products: Product[] =  JSON.parse(localStorage.getItem("products"));
 
       key : number;
-      len : number = this.products.length;
+      len : number = 0;
+      //this.products? this.products.length : 0;
 
 
 
@@ -32,7 +27,7 @@ export class ProductsComponent implements OnInit {
 
       saveLocal() {
         localStorage.setItem("products", JSON.stringify(this.products));
-        this.len = this.products.length;
+       // this.len = this.products.length;
       }
 
 

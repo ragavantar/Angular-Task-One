@@ -15,17 +15,20 @@ export class ProdFormComponent implements OnInit {
   prod : Product = {
     name : "",
     price : null,
-    img : null
+    img : null,
+    qty : null,
+    desc : ""
   };
 
   key : number;
 
-  products : Product [] = [{
+  products : Product [] = [];
+  /*[{
     name : 'p1',
     price : 1,
     img : null
   }];
-
+*/
   edit: number = 0;
 
   ngOnInit() {
@@ -68,6 +71,8 @@ export class ProdFormComponent implements OnInit {
     newProd.name = this.prod.name;
     newProd.price = this.prod.price;
     newProd.img = this.prod.img;
+    newProd.desc = this.prod.desc;
+    newProd.qty = this.prod.qty;
     this.products.push(newProd);
     console.log(this.products);
     this.saveLocal();
@@ -84,6 +89,8 @@ export class ProdFormComponent implements OnInit {
     newProd.name = this.prod.name;
     newProd.price = this.prod.price;
     newProd.img = this.prod.img;
+    newProd.desc = this.prod.desc;
+    newProd.qty = this.prod.qty;
     this.products[this.key] = newProd;
     this.edit=0;
     this.saveLocal();
