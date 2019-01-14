@@ -1,0 +1,26 @@
+
+<div>
+  <h2>Products  <span class="badge badge-light">{{len}}</span></h2>
+  <table class="table">
+    <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Quantity</td>
+        <td colspan="2">Options</td>
+    </tr>
+    <tr  *ngFor="let prod of products; let i= index;">
+      <td>
+        <img *ngFor="let data of prod.img; let ind = index;"
+        src={{data}}  />
+      </td>
+      <td>{{prod.name}}</td>
+      <td>{{prod.price}}</td>
+      <td>
+        <a routerLink="/form/{{i}}"><i class="fas fa-edit"></i></a>
+      </td>
+      <td (click)="deleteProd(prod)"><i class="fas fa-trash-alt"></i></td>
+    </tr>
+    </table>
+
+
+  </div>

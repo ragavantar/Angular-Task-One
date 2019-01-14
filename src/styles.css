@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+.side {
+    color: white;
+    background-color: orange;
+    padding: 5px;
+    font-size: 15pt;
+    margin: 2px;
+    display: block;
+}
+
+.content {
+    text-align: center;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+a, a:hover {
+    text-decoration: none;
+}

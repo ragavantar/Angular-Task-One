@@ -1,0 +1,13 @@
+<div>
+    <input type="file" [(ngModel)]="prod.img" (blur)="storeImg($event)" accept="image/*" required multiple /><br/>
+    <img *ngFor="let data of prod.img" src={{data}} /><br/>
+    <label>Name:
+      <input [(ngModel)]="prod.name" placeholder="name" class="form-control">
+    </label><br/>
+    <label>Price:
+      <input [(ngModel)]="prod.price" placeholder="price" class="form-control">
+    </label><br/>
+    <label>
+        <input type="Submit" value="Save" (click)="edit ? saveProd() : addProd()"/>
+      </label>
+  </div>
